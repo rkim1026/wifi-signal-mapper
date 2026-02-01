@@ -8,7 +8,7 @@
 
 
 
-constexpr const char* CLIENT_ID = "NETGEAR17";// fill this, this needs to be unique
+constexpr const char* CLIENT_ID = "richkim1026";// fill this, this needs to be unique
 constexpr const char* TOPIC_PREFIX = "wifiscanner";//fill this, this needs to match topic prefix from the subscriber.py. Make sure it does not end with / 
 
 ECE140_MQTT mqtt(CLIENT_ID, TOPIC_PREFIX);
@@ -57,27 +57,7 @@ void setup() {
 void loop() {
     mqtt.loop();
 
-    // here are some hints for using wifi network scanner
-    // you can get count using
-    // int numNetworks = WiFi.scanNetworks();
-    // you can learn about the ith wifi network name using
-    // WiFi.SSID(i)
-    // you can learn about the ith wifi network signal strength using 
-    // WiFi.RSSI(i)
-    // you will also probably want to construct a json object
 
-    /*
-    {
-        "device_id": "esp32-001",
-        "timestamp": 12345,
-        "connected_ssid": "MyNetwork",
-        "connected_rssi": -45,
-        "networks": [
-            {"ssid": "Network1", "rssi": -45},
-            {"ssid": "Network2", "rssi": -62}
-        ]
-    }
-    */
     unsigned long currentMillis = millis();
 
     std::vector<NetworkInfo> foundNetworks;
