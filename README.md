@@ -1,20 +1,7 @@
-# Challenge 1: WiFi Signal Strength Mapper
+# WiFi Signal Strength Mapper
 
 ## Description
 WiFi scanner that publishes network data via MQTT and creates a live bar chart visualization in Python.
-
-## Setup
-
-### ESP32
-1. Copy `esp32/env.example` to `esp32/.env`
-2. Fill in your WiFi credentials and MQTT topic prefix
-3. Upload to ESP32 using PlatformIO
-
-### Python
-```bash
-cd python
-uv run visualizer.py
-```
 
 ## Features
 - Scans WiFi networks every 5 seconds
